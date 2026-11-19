@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90">
+  <path d="M42 2 6 14v26c0 22 15 39 36 48 21-9 36-26 36-48V14z" fill="#c8102e"/>
+  <path d="M18 44 42 24l24 20" fill="none" stroke="#fff" stroke-width="6"/>
+  <path d="M46 38 35 56h9l-4 15 13-20h-9z" fill="#fff"/>
+  <text x="94" y="46" font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif" font-weight="800" font-size="36" fill="#ffffff" textLength="180" lengthAdjust="spacingAndGlyphs">ACOPERIȘURI</text>
+  <rect x="94" y="56" width="96" height="26" fill="#c8102e"/>
+  <text x="142" y="75" text-anchor="middle" font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif" font-weight="700" font-size="19" fill="#fff" letter-spacing="2.5">URGENTE</text>
+  <text x="200" y="75" font-family="Barlow,'Segoe UI',Arial,sans-serif" font-weight="600" font-size="12.5" fill="#aab4c3" letter-spacing="1">REPARAȚII · CLUJ</text>
+</svg>

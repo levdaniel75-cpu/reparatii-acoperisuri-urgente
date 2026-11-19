@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90">
+  <defs><path id="d06" d="M45 45m-31 0a31 31 0 1 1 62 0a31 31 0 1 1-62 0"/></defs>
+  <circle cx="45" cy="45" r="43" fill="#2e7d32"/>
+  <circle cx="45" cy="45" r="24" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <text font-family="Barlow,'Segoe UI',Arial,sans-serif" font-weight="700" font-size="8.4" fill="#fff" letter-spacing="1.6"><textPath href="#d06" startOffset="0">REPARAȚII • ACOPERIȘURI • URGENTE •</textPath></text>
+  <path d="M31 48 45 35l14 13" fill="none" stroke="#fff" stroke-width="4.5"/>
+  <path d="M35 47v12h20V47" fill="none" stroke="#fff" stroke-width="3.5"/>
+  <text x="104" y="34" font-family="Barlow,'Segoe UI',Arial,sans-serif" font-weight="700" font-size="13" fill="#aab4c3" letter-spacing="4">REPARAȚII</text>
+  <text x="102" y="66" font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif" font-weight="800" font-size="38" fill="#ffffff" textLength="186" lengthAdjust="spacingAndGlyphs">ACOPERIȘURI</text>
+  <text x="104" y="84" font-family="Barlow,'Segoe UI',Arial,sans-serif" font-weight="700" font-size="12" fill="#2e7d32" letter-spacing="3.2">URGENTE · CLUJ</text>
+</svg>

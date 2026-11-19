@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /logo-uri.html
+Sitemap: https://reparatii-acoperisuri-urgente.ro/sitemap.xml

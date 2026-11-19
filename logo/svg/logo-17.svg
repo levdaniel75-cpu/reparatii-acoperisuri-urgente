@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90">
+  <path d="M6 44 44 10l38 34" fill="none" stroke="#10292e" stroke-width="7"/>
+  <path d="M16 40v42h56V40" fill="none" stroke="#10292e" stroke-width="6"/>
+  <path d="M44 40s-13 14-13 22a13 13 0 0 0 26 0c0-8-13-22-13-22z" fill="#00897b"/>
+  <path d="M38 62l5 5 9-10" fill="none" stroke="#fff" stroke-width="3"/>
+  <text x="98" y="48" font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif" font-weight="800" font-size="33" fill="#10292e" textLength="250" lengthAdjust="spacingAndGlyphs">ACOPERIȘURI <tspan fill="#00897b">URGENTE</tspan></text>
+  <rect x="98" y="58" width="250" height="1.5" fill="#56707a" opacity=".5"/>
+  <text x="98" y="78" font-family="Barlow,'Segoe UI',Arial,sans-serif" font-weight="600" font-size="12.5" fill="#56707a" letter-spacing="1.4" textLength="250" lengthAdjust="spacing">REPARAȚII ȘI INFILTRAȚII · CLUJ-NAPOCA</text>
+</svg>
