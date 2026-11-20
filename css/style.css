@@ -47,13 +47,20 @@ p { margin: 0 0 1em; }
 /* ---------- header: logo pe alb, bară albă sus, bară portocalie cu colț oblic ---------- */
 .header { position: sticky; top: 0; z-index: 50; background: #fff; box-shadow: 0 2px 14px rgba(14,26,43,.08); }
 .hd { display: flex; align-items: stretch; }
-.logo { display: flex; align-items: center; padding: 10px 28px 10px 0; flex: none; }
-.logo svg { height: 60px; width: auto; display: block; }
+.logo { display: flex; align-items: center; padding: 6px 30px 6px 0; flex: none; }
+.logo svg { height: 98px; width: auto; display: block; }
 .hd-right { flex: 1; display: flex; flex-direction: column; min-width: 0; }
-.hd-top { display: flex; align-items: center; gap: 34px; height: 40px; font-size: 14px; padding-left: 34px; }
-.hd-top span { display: inline-flex; align-items: center; gap: 8px; }
-.hd-top .ic { width: 15px; height: 15px; color: var(--orange); }
-.hd-top a { font-weight: 700; }
+.hd-top { display: flex; align-items: center; gap: 10px; height: 46px; font-size: 14px; padding-left: 34px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 4px 14px 4px 4px; border-radius: 999px; background: var(--paper); color: var(--ink); white-space: nowrap; transition: background .2s; }
+.chip i { width: 28px; height: 28px; border-radius: 50%; background: #fff; color: var(--orange); display: grid; place-items: center; box-shadow: 0 1px 3px rgba(14,26,43,.12); }
+.chip i svg { width: 14px; height: 14px; }
+.chip b { color: var(--navy); font-weight: 700; }
+a.chip:hover { background: #ffe9dc; }
+.hd-note { margin-left: auto; display: inline-flex; align-items: center; gap: 9px; font-size: 13.5px; color: var(--muted); white-space: nowrap; }
+.hd-note .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,.18); }
+.hd-wa { display: inline-flex; align-items: center; gap: 7px; padding: 6px 15px; border-radius: 999px; border: 1.5px solid #1fae5b; color: #178a48; font-weight: 600; white-space: nowrap; transition: background .2s, color .2s; }
+.hd-wa svg { width: 16px; height: 16px; }
+.hd-wa:hover { background: #1fae5b; color: #fff; }
 .hd-bar { position: relative; display: flex; align-items: center; gap: 18px; height: 66px; padding-left: 34px; color: #fff; }
 .hd-bar::before {
   content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: -100vw; z-index: -1;
@@ -331,7 +338,7 @@ h2.t { font-size: clamp(36px, 4.4vw, 56px); color: var(--navy); }
 .footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .footer a:hover { color: var(--orange); }
 .footer .ph { font-family: var(--head); font-size: 30px; font-weight: 700; color: #fff; }
-.footer .logo svg { height: 60px; }
+.footer .logo svg { height: 120px; }
 .footer .bottom { border-top: 1px solid rgba(255,255,255,.07); margin-top: 60px; padding: 24px 0; display: flex; justify-content: space-between; font-size: 14px; flex-wrap: wrap; gap: 10px; }
 
 .float-call { display: none; }
@@ -339,6 +346,8 @@ h2.t { font-size: clamp(36px, 4.4vw, 56px); color: var(--navy); }
 /* ---------- responsive ---------- */
 @media (max-width: 1100px) {
   .head-call { display: none; }
+  .hd-note { display: none; }
+  .hd-wa { margin-left: auto; }
   .btn-cons { margin-left: auto; }
   .about, .why, .contact, .svc-layout, .cta .wrap { grid-template-columns: 1fr; }
   .why .txt { padding: 80px 24px; }
@@ -359,6 +368,7 @@ h2.t { font-size: clamp(36px, 4.4vw, 56px); color: var(--navy); }
 @media (max-width: 900px) {
   .burger { display: block; }
   .btn-cons { display: none; }
+  .hd-wa { display: none; }
   .nav {
     position: absolute; top: 100%; left: auto; right: -24px; width: 100vw; background: #fff; flex-direction: column; align-items: stretch;
     display: none; box-shadow: 0 20px 40px rgba(14,26,43,.15); border-top: 3px solid var(--navy); margin: 0;
@@ -382,7 +392,8 @@ h2.t { font-size: clamp(36px, 4.4vw, 56px); color: var(--navy); }
   .hd-top span:first-child { display: none; }
   .hd-bar { height: 52px; padding-left: 22px; }
   .logo { padding-right: 10px; }
-  .logo svg { height: 42px; }
+  .logo svg { height: 76px; }
+  .hd-top { height: 40px; }
   .hero .wrap { padding-top: 70px; padding-bottom: 120px; }
   .hero-text { padding-left: 20px; }
   .hero .over { font-size: 15px; letter-spacing: .1em; }

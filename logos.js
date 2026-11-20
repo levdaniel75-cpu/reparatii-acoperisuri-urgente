@@ -152,7 +152,22 @@ ${CONCEPTS.map(([key, label]) => `<h2>${label}</h2><div class="grid">${variants.
   <div class="meta"><span><b>${v.code}</b>${v.palette}</span><span><a href="index.html?logo=${v.code}">Vezi pe site</a><a href="logo/svg/logo-${v.code}.svg" download>SVG</a></span></div></div>`).join('')}</div>`).join('\n')}
 </main></body></html>`;
 
-// Logo-ul folosit acum pe site
-const DEFAULT = '01';
-const def = variants.find(v => v.code === DEFAULT);
-module.exports = { variants, favicon, sheet, header: def.svg, footer: def.dark };
+// Logo-ul site-ului: emblemă centrată (acoperiș cu horn, casă cu patru ferestre, nume pe două rânduri)
+const M = `font-family="Montserrat, Arial, sans-serif"`;
+const emblem = (p, dark) => {
+  const t = dark ? '#ffffff' : p.t;
+  const box = dark ? p.a : p.t;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="24 12 312 282">
+  <path d="M66 112 180 22l114 90" fill="none" stroke="${p.a}" stroke-width="14"/>
+  <rect x="236" y="38" width="18" height="44" fill="${p.a}"/>
+  <path d="M108 100v68h144v-68" fill="none" stroke="${t}" stroke-width="9"/>
+  <rect x="163" y="114" width="15" height="15" fill="${p.a}"/><rect x="182" y="114" width="15" height="15" fill="${p.a}"/>
+  <rect x="163" y="133" width="15" height="15" fill="${p.a}"/><rect x="182" y="133" width="15" height="15" fill="${p.a}"/>
+  <text x="180" y="214" text-anchor="middle" ${M} font-weight="900" font-size="38" fill="${t}" textLength="292" lengthAdjust="spacingAndGlyphs">ACOPERIȘURI</text>
+  <text x="180" y="250" text-anchor="middle" ${M} font-weight="800" font-size="27" fill="${p.a}" letter-spacing="9">URGENTE</text>
+  <rect x="88" y="262" width="184" height="26" fill="${box}"/>
+  <text x="180" y="280" text-anchor="middle" ${M} font-weight="700" font-size="11.5" fill="#fff" letter-spacing="1.6">MONTAJ ȘI REPARAȚII</text>
+</svg>`;
+};
+
+module.exports = { variants, favicon, sheet, header: emblem(PAL.portocaliu, false), footer: emblem(PAL.portocaliu, true) };

@@ -71,7 +71,7 @@ const head = (title, desc, slug) => `<!doctype html>
 <link rel="icon" href="logo/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">${JSON.stringify({
   '@context': 'https://schema.org', '@type': 'RoofingContractor', name: SITE.name, telephone: SITE.tel,
@@ -87,8 +87,10 @@ const header = active => `
   <a class="logo" href="index.html" aria-label="${SITE.name}">${logos.header}</a>
   <div class="hd-right">
   <div class="hd-top">
-    <span>${I.pin.replace('<svg', '<svg class="ic"')} ${SITE.city}</span>
-    <span>${I.phone.replace('<svg', '<svg class="ic"')} <span class="lbl">Telefon:</span> <a href="tel:${SITE.tel}">${SITE.phone}</a></span>
+    <span class="chip"><i>${I.pin}</i>${SITE.city}</span>
+    <a class="chip" href="tel:${SITE.tel}"><i>${I.phone}</i><span class="lbl">Telefon:</span> <b>${SITE.phone}</b></a>
+    <span class="hd-note"><i class="dot"></i>Evaluare gratuită la fața locului</span>
+    <a class="hd-wa" href="${SITE.wa}" target="_blank" rel="noopener">${I.wa} WhatsApp</a>
   </div>
   <div class="hd-bar">
   <button class="burger" aria-label="Meniu"><span></span><span></span><span></span></button>
