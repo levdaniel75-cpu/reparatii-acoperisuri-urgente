@@ -157,16 +157,25 @@ const M = `font-family="Montserrat, Arial, sans-serif"`;
 const emblem = (p, dark) => {
   const t = dark ? '#ffffff' : p.t;
   const box = dark ? p.a : p.t;
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="24 12 312 282">
-  <path d="M66 112 180 22l114 90" fill="none" stroke="${p.a}" stroke-width="14"/>
-  <rect x="236" y="38" width="18" height="44" fill="${p.a}"/>
-  <path d="M108 100v68h144v-68" fill="none" stroke="${t}" stroke-width="9"/>
-  <rect x="163" y="114" width="15" height="15" fill="${p.a}"/><rect x="182" y="114" width="15" height="15" fill="${p.a}"/>
-  <rect x="163" y="133" width="15" height="15" fill="${p.a}"/><rect x="182" y="133" width="15" height="15" fill="${p.a}"/>
-  <text x="180" y="214" text-anchor="middle" ${M} font-weight="900" font-size="38" fill="${t}" textLength="292" lengthAdjust="spacingAndGlyphs">ACOPERIȘURI</text>
-  <text x="180" y="250" text-anchor="middle" ${M} font-weight="800" font-size="27" fill="${p.a}" letter-spacing="9">URGENTE</text>
-  <rect x="88" y="262" width="184" height="26" fill="${box}"/>
-  <text x="180" y="280" text-anchor="middle" ${M} font-weight="700" font-size="11.5" fill="#fff" letter-spacing="1.6">MONTAJ ȘI REPARAȚII</text>
+  const win = (x, y) => `<rect x="${x}" y="${y}" width="9" height="9" fill="${p.a}"/><rect x="${x + 11}" y="${y}" width="9" height="9" fill="${p.a}"/><rect x="${x}" y="${y + 11}" width="9" height="9" fill="${p.a}"/><rect x="${x + 11}" y="${y + 11}" width="9" height="9" fill="${p.a}"/>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 8 300 270">
+  <!-- clădire înaltă din contur, în stânga -->
+  <path d="M58 150V44h30v106" fill="none" stroke="${t}" stroke-width="5"/>
+  ${[56, 76, 96, 116].map(y => `<rect x="66" y="${y}" width="5" height="10" fill="${t}"/><rect x="75" y="${y}" width="5" height="10" fill="${t}"/>`).join('')}
+  <!-- acoperiș mare cu vârfuri arcuite -->
+  <path d="M74 138C104 110 140 78 170 50c30 28 66 60 96 88" fill="none" stroke="${p.a}" stroke-width="15" stroke-linecap="round"/>
+  <rect x="222" y="66" width="16" height="40" fill="${p.a}"/>
+  <!-- case cu ferestre -->
+  <path d="M112 128 146 98l34 30v34h-68z" fill="${t}"/>
+  ${win(136, 124)}
+  <path d="M178 140l30-26 30 26v22h-60z" fill="${t}"/>
+  ${win(198, 136)}
+  <rect x="96" y="162" width="160" height="5" fill="${t}"/>
+  <!-- text -->
+  <text x="170" y="204" text-anchor="middle" ${M} font-weight="900" font-size="34" fill="${p.a}" textLength="262" lengthAdjust="spacingAndGlyphs">ACOPERIȘURI</text>
+  <text x="170" y="243" text-anchor="middle" ${M} font-weight="900" font-size="30" fill="${t}" textLength="190" lengthAdjust="spacingAndGlyphs">URGENTE</text>
+  <rect x="58" y="252" width="224" height="2" fill="${t}"/><rect x="58" y="256" width="224" height="1" fill="${t}"/>
+  <text x="170" y="274" text-anchor="middle" ${M} font-weight="700" font-size="14" fill="${t}">Montaj și Reparații</text>
 </svg>`;
 };
 
